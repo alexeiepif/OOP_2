@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+
 class Rational:
     def __init__(self, a=0, b=1):
         a = int(a)
@@ -67,7 +69,6 @@ class Rational:
 
     # Привести дробь к вещественному значению.
     def __float__(self):
-
         return self.__numerator / self.__denominator
 
     # Привести дробь к логическому значению.
@@ -124,9 +125,7 @@ class Rational:
 
     # Деление обыкновенных дробей.
     def __itruediv__(self, rhs):  # /=
-
         if isinstance(rhs, Rational):
-
             a = self.numerator * rhs.denominator
             b = self.denominator * rhs.numerator
             if b == 0:
